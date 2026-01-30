@@ -307,7 +307,7 @@ The builder sets these Flatpak permissions by default:
 ## Limitations
 
 - Only supports x86_64 architecture
-- Requires Fedora 43 base image
+- Requires Fedora base image
 - Some complex applications may need manual tweaking
 
 ## Contributing

@@ -167,6 +167,7 @@ step_exec() {
                 SUGGESTED="$CMD_IN_DESKTOP"
             else
                 # Try to find in /usr/bin or /usr/sbin
+                podman exec "$CONTAINER_NAME" dnf install -y which > /dev/null 2>&1
                 SUGGESTED=$(podman exec "$CONTAINER_NAME" which "$CMD_IN_DESKTOP" 2>/dev/null || echo "")
                 
                 # If found, check if it's a wrapper script and extract real path
